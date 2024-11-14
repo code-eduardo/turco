@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>El-Turcord</title>
+		<!-- <link rel="stylesheet" href="styles.css" /> -->
+	</head>
+<style>
+	/* letras */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--primary-color: #c62d2d; ;
+	--background-color: #f9f5f0;
+	--dark-color: #151515;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ********************************** */
+/*             UTILIDADES             */
+/* ********************************** */
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.heading-1 {
+	text-align: center;
+	font-weight: 500; /* letras negra el titulo */
+	font-size: 3rem;
+}
+
+/* ********************************** */
+/*   LA CABEZA DE LA PAGINA           */
+/* ********************************** */
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.customer-support i {
+	font-size: 3.3rem;
+}
+
+.content-customer-support {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.container-logo i {
+	font-size: 3rem;
+
+}
+/*  */
+.container-logo h1 a {
+	text-decoration: none;
+	color: #070606;  
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.container-user {
+	display: flex;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.container-user .fa-user {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-right: 2.5rem;
+	border-right: 1px solid #e2e2e2;
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-left: 1rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+}
+
+/* ********************************** */
+/*           Diseno de la foto        */
+/* ********************************** */
+/* imagen del princio del fondo */
+.banner {
+	background-image: linear-gradient(120deg, #000000, #00000020),
+	url('0000.jpg');
+	/* para el fondo principal */
+	height: 50rem;
+	background-size: cover;
+	background-position: center;
+	width: auto;
+	/*tal vez lo quite ese width */
+	
+}
+
+.content-banner {
+	max-width: 90rem;
+	margin: 0 auto;
+	padding: 25rem 0;
+}
+
+.content-banner p {
+	color: var(--primary-color);
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	font-weight: 500;
+	
+}
+
+.content-banner h2 {
+	color: #f1f0ec; 
+	font-size: 3.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.content-banner a {
+	margin-top: 2rem;
+	text-decoration: none;
+	color: #fff;
+	background-color: var(--primary-color);
+	display: inline-block;
+	padding: 1rem 3rem;
+	text-transform: uppercase;
+	border-radius: 3rem;
+	
+}
+
+/* ********************************** */
+/*   CONTENIDO PRINCIPAL              */
+/* ********************************** */
+
+.main-content {
+	background-color: var(--background-color);
+}
+
+/* ********************************** */
+/* DISENO DE LOS SIMBOLOS DE SERVICIO */
+/* ********************************** */
+/*DISENO DE LOS SERVICI AL CLIENTE Y  DELIVERY*/
+.motor {
+            width: 32px; /* Ancho del icono */
+            height: 32px; /* Alto del icono */
+        }
+
+.container-features {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+	padding: 3rem 0;
+}
+
+.card-feature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	padding: 1.5rem 0;
+}
+
+.card-feature i {
+	font-size: 2.7rem;
+	color: var(--primary-color);
+}
+
+.feature-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.feature-content span {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--dark-color);
+}
+
+.feature-content p {
+	color:#c62d2d; 
+	font-weight: 500;
+}
+
+/* ********************************** */
+/*      DEL MENU CATEGORIES           */
+/* ********************************** */
+
+.top-categories {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+/* diseno de menu de categoria */
+.container-categories {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+}
+
+.card-category {
+	height: 20rem;  /* su altura */ 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2rem;
+	gap: 2rem;
+}
+/*  */
+.category-moca {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('plato.png');
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.category-capuchino {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('tacos2.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.category-expreso {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('quesadilla.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.card-category p {
+	font-size: 2.5rem;
+	color: #fff;
+	text-transform: capitalize;
+	position: relative;
+}
+
+.card-category p::after {
+	content: '';
+	width: 2.5rem;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -1rem;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
+.card-category span {
+	font-size: 1.6rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+.card-category span:hover {
+	color: var(--primary-color);
+}
+
+/* ********************************** */
+/*            TOP PRODUCTS            */
+/* ********************************** */
+.top-products {
+	display: flex; 
+	flex-direction: column;
+	gap: 2rem;  /*tope del contenido de ariba */
+}
+
+/* Contenedor deslizante */
+.container-options-wrapper {
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+/* diseno de los botoenes de seleccion */
+.container-options {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;  /*espacio entre la separacion de los botones de seleccion */
+	margin-bottom: 1rem;  	/*espacio entren el boton y el tope de abajo*/
+	white-space: nowrap; /* Asegura que los botones no se dividan en múltiples líneas */
+}
+
+/* diseno del selecion de opciones del menu  */
+.container-options span {
+	color: #010101;
+	background-color: #fff;
+	padding: 0.9rem 4rem;
+	font-size: 1.4rem;
+	text-transform: capitalize;
+	border-radius: 2rem;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.container-options span:hover {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+/* -------------------------------------------------------------------------- */
+/* Products */
+/* Estilos para la sección de carnes */
+#carnes {
+    padding: 20px;
+}
+
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+/* para el espacio entre arriba y abajo productos paddig */
+.card-product {
+	background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.container-img {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	
+}
+
+.container-img .discount {
+	position: absolute;
+	left: 0;
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 3px 1.2rem;  /*para el padding de los descuentos*/
+	border-radius: 1rem;
+	font-size: 1.2rem;
+}
+
+.card-product:hover .discount {
+	background-color: #000;
+}
+
+/*--------------------------------------------*/
+/* diseno de las estrellas */
+.content-card-product {
+	padding: 20px;
+}
+/* diseno del menu de las letras */
+.content-card-product h3 {
+	grid-row: 2/3;
+	grid-column: 1/-1;
+	font-weight: 500; /*color en negritas en titulo de los articulos*/
+	font-size: 1.6rem; /*tamano de los titulos del cuadro del menu*/
+	margin-bottom: 1rem;
+	cursor: pointer;
+color: #7f1515;
+}
+.description{
+	font-size: 1.4rem;
+}
+.content-card-product h3:hover {
+	color: var(--primary-color);
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 14px;
+
+}
+
+/* 1 1 1 1 1 1 1 1 1  1 1 1 1 1 1 1 1 1 */
+.add-cart {
+	justify-self: start;
+	border: 2px solid var(--primary-color);
+	padding: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-cart:hover {
+	background-color: var(--primary-color);
+}
+
+.add-cart i {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.add-cart:hover i {
+	color: #fff;
+}
+
+.content-card-product .price {
+	justify-self: center;
+	align-self: center;
+/* tamano de el size de los precios */
+	font-size: 1.7rem;
+/*el color negro en negritas*/
+	font-weight: 600;
+	margin-top: 20px;
+}
+
+.content-card-product .price span {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #777; 
+	/* color de el precio tachado */
+	margin-left: 0.5rem;
+	
+}
+
+/* ********************************** */
+/*               GALLERY              */
+/* ********************************** */
+
+/* ********************************** */
+/*              SPECIALS              */
+/* ********************************** */
+.specials {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+/* ********************************** */
+/*                BLOGS               */
+/* ********************************** */
+
+/* ********************************** */
+/*      edit del FOOTER               */
+/* ********************************** */
+
+.footer {
+	background-color: var(--dark-color);
+}
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 3rem;
+}
+
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 30rem;
+	gap: 3rem;
+	justify-items: center;
+}
+/* color de fuente de informaciones los sudtemas del froonter, */
+.title-footer {
+	font-weight: 600;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	color: #fdf7f7;
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+	list-style: none;
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+	color: var(--primary-color);
+}
+
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.social-icons span {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icons span i {
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.facebook {
+	background-color: #3b5998;
+}
+
+.twitter {
+	background-color: #00acee;
+}
+
+.youtube {
+	background-color: #c4302b;
+}
+
+.pinterest {
+	background-color: #c8232c;
+}
+
+.instagram {
+	background: linear-gradient(
+		#405de6,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d,
+		#f56040,
+		#fcaf45
+	);
+}
+
+.content p {
+	font-size: 1.4rem;
+	color: #fff;
+	font-weight: 300;
+}
+
+.content input {
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #e6e3e0;
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: var(--dark-color);
+	display: block;
+	margin-bottom: 3rem;
+	margin-top: 2rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content input::-webkit-input-placeholder {
+	color: #eee;
+}
+
+.content button {
+	border: none;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	font-size: 1.4rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.content button:hover {
+	background-color: var(--background-color);
+	color: var(--primary-color);
+}
+
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2rem;
+
+	border-top: 1px solid #e0ddda;
+}
+
+.copyright p {
+	font-weight: 400;
+	font-size: 1.6rem;
+	color: floralwhite;
+}
+/* ssss s s s ss   s ss */
+/* ********************************** */
+/*       MEDIA QUERIES -- 768px       */
+/* ********************************** */
+@media (max-width: 768px) {
+	
+/* la cabeza de la pagina wed */
+	.hero {
+		padding: 1rem;
+	}
+/*------------------*/
+	.customer-support {
+		display: none;  /* Ocultar secciones no necesarias */
+	}
+
+	.content-shopping-cart {
+		display: none;   /* Ocultar secciones no necesarias */
+	}
+/*-----------------------*/
+
+.container-user {
+        display: none;
+    }
+
+	.menu {
+		display: none; /* Ocultar menú normal en móvil */
+	}
+
+	.container-features {
+		grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablet */
+		padding: 3rem 2rem;
+	}
+
+	.card-feature {
+		padding: 2rem;
+	}
+
+	.heading-1 {
+		font-size: 2.4rem; /* Tamaño de fuente para encabezados */
+	}
+
+	.card-category {
+		height: 12rem; /* Altura fija para categorías */
+	}
+
+	.card-category p {
+		font-size: 2rem; /* Tamaño de fuente para texto de categorías */
+		text-align: center;
+		line-height: 1;
+	}
+
+	.card-category span {
+		font-size: 1.4rem; /* Tamaño de fuente para precios o descripciones */
+	}
+
+	.container-options {
+		align-items: center; 
+		overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+  /* Alinear elementos en el centro */
+	}
+
+/* botones de selecccion de menu,  */
+
+	.container-options span {
+	    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+	}
+
+/* lo que me permite que este en dos columnas los productos con un,minmax 20*/
+
+    /* Productos en columnas responsivas */
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dos columnas, */
+	}
+/* los 200px lo agranda mas, y el 20rem que tenia lo achica mas */
+/*-----------------------------------*/
+.container-img {
+    height: 150px;
+  }
+	.gallery {
+		grid-template-rows: repeat(2, 15rem); /* Dos filas en la galería */
+	}
+
+
+
+	.menu-footer {
+		grid-template-columns: repeat(2, 1fr); /* Dos columnas en el pie de página */
+
+	}
+
+	.copyright {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem; /* Espaciado entre elementos */
+	}
+	
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 468px       */
+/* ********************************** */
+@media (max-width: 468px) {
+	html {
+		font-size: 40%; /* Ajusta el tamaño de fuente base */
+	}
+/* 45.5 */
+/* diseno de las letras de, 100% Natural */
+	.content-banner {
+		max-width: 50rem; /* Mantener ancho del banner */
+		padding: 22rem 0;  /* Espaciado vertical */
+	}
+
+	.heading-1 {
+		font-size: 2.8rem; /* Tamaño de fuente más grande para encabezados */
+	}
+  .container-user {
+        display: none;
+    }
+	.card-feature {
+		flex-direction: column; /* Colocar elementos en columna */
+		border-radius: 2rem; /* Esquinas redondeadas */
+	}
+
+	.feature-content {
+		align-items: center;  /* Centrar contenido */
+	}
+
+	.feature-content p {
+		font-size: 1.4rem; /* Tamaño de fuente para descripciones */
+		text-align: center;
+	}
+
+	.feature-content span {
+		font-size: 1.6rem; /* Tamaño de fuente para precios */
+		text-align: center;
+	}
+
+	.container-options span {
+		font-size: 1.8rem; /* Tamaño de fuente para botones */
+		padding: 1rem 1.5rem;  /* Espaciado interno */
+		font-weight: 500; /* Negrita */
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		gap: 1rem; /* Espaciado entre productos */
+	}
+/*-------------------------------------------------------*/
+	.container-img{
+	height: 120px; /* Establece una altura fija para todas las imágenes */
+	
+	 /* Para ocultar cualquier parte de la imagen que sobresalga */
+	} 
+
+
+	.container-img .discount {
+		font-size: 2rem; /* Tamaño de fuente para descuentos */
+
+	}
+
+	.content-card-product h3 {
+		font-size: 2.2rem; /* Tamaño de fuente para títulos de productos */
+
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 20rem); /* Dos filas más altas */
+	}
+
+	/* .blogs {
+		padding: 2rem;  /* Espaciado en secciones de blog */
+
+	.btn-read-more{
+		font-size: 1.8rem; /* Tamaño de fuente para botones de leer más */
+	}
+
+	.contact-info ul,
+	.information ul,
+	.my-account ul{
+		display: none; /* Ocultar listas no necesarias */
+	}
+
+	.contact-info {
+		align-items: center;  /* Centrar información de contacto */
+	}
+
+	.menu-footer{
+		grid-template-columns: 1fr; /* Una columna en el pie de página */
+	}
+
+	.content p{
+		font-size: 1.6rem;  /* Tamaño de fuente para párrafos */
+	}
+}
+/*------------------------------------------------------------------------------------------------------- */
+/*para el funcionamiento de los diferentes click*/
+.section {
+    display: none; /*section estarán ocultas para el clck (display: none)*/
+    padding: 2rem; /*establece un espacio de relleno*/
+    border: 1px solid #fdf6f6; /*bordes*/
+}
+
+    .section.active {
+    display: block; /*selecciona las secciones que tienen tanto la clase .section como la clase .active.*/
+       }
+
+    .section {
+    padding: 2px 4; /*es el espacio que me hace, para los texto que estan centralizadp haiga separacion con el menu*/
+    text-align: center; /*centra horizontalmente el texto dentro de la sección, select */
+	margin-bottom: 40px; /*lo que separa la divicion del diseno principal con el de abajo. no pase de la linea*/
+      }
+/* ------------------------------------------------------------------------------------------------------------- */
+/* diseno de titulo de cada nombre que aparece en las categoria */
+.section-title {
+        text-align: center; /* Centra el texto */
+        font-size: 2rem; /* Tamaño de fuente */
+        color: #c62d2d; /* Color del texto */
+        margin-bottom: 20px; /* Espaciado inferior */
+        padding: 10px; /* Espaciado interno */
+        background-color: #f4f4f4; /* Fondo de la sección */
+        border-radius: 5px; /* Bordes redondeados */
+        border-bottom: 2px solid #ccc; /* Línea en la parte inferior */
+        text-transform: uppercase; /* Convertir texto a mayúsculas */
+        letter-spacing: 2px; /* Espaciado entre letras */
+		margin-top: 20px;
+    }
+/*-----------------------------------------------------------------------------*/
+
+/* Estilo para el texto "Ver más" */
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Inicia oculto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Asegura que el modal esté sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Toma el ancho completo */
+    height: 100%; /* Toma el alto completo */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semi-transparente */
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Reduce el margen superior e inferior */
+    padding: 15px; /* Reduce el padding para un modal más pequeño */
+    border-radius: 10px;
+    width: 80%;   /* Establece un ancho más reducido */
+    max-width: 500px;   /* Máximo ancho del modal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+	position: relative; /* Importante para que la "X" se ubique dentro del modal */
+    animation: slideUp 0.5s ease-out;
+}
+
+/* Animación de deslizamiento */
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* El botón para cerrar el modal */
+.close {
+    color: #aaa;
+    font-size: 30px; /* Tamaño más pequeño */
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+	z-index: 10; /* Asegura que la "X" esté siempre encima del contenido */
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Estilo del título del modal */
+.modal-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c62d2d;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Estilo para la imagen del plato */
+.plato-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Descripción del modal */
+.modal-description {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Estilo para las opciones del plato */
+.modal-options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.modal-options li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-options li:last-child {
+    border-bottom: none;
+}
+
+.modal-options li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+    padding-left: 10px;
+}
+/* Imagen dentro del modal */
+.plato-image {
+    max-width: 80%; /* Asegura que la imagen no exceda el tamaño del modal */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+} 
+/*----------------------------------------------------------------------------------------------*/
+</style>
+	<body>
+		<header>
+			<div class="container-hero">
+				<div class="container hero">
+					<div class="customer-support">
+						<i class="fa-solid fa-headset"></i>
+						<div class="content-customer-support">
+							<span class="text">Soporte Tecnico</span>
+							<span class="number">809-234-1232</span>
+						</div>
+					</div>
+
+					<div class="container-logo">
+						<img src="22.png" alt="Logo El-Turcord" width="60" height="60" />
+						<h1 class="logo"><a>El-Turcord</a></h1>
+					</div>
+<!-- =---------------------------------------------------------------------------------- -->
+					<div class="container-user">
+						<i class="customer-support"></i>
+						<i class="fa-solid fa-headset"></i>
+						<div class="content-customer-support">
+							<span class="text">Soporte Tecnico</span>
+							<span class="number">809-234-1232</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+<!-- ---------------------banner es el fondo de pagina---------------------------------------------------------- -->
+		<section class="banner">
+			<div class="content-banner">
+				<p>comida Deliciosa</p>
+				<h2>100% Natural <br />En las mejores manos</h2>
+				<!-- <a href="#">Bienvenido</a> -->
+			</div>
+		</section>
+
+		<main class="main-content">
+			<section class="container container-features">
+				<div class="card-feature">
+					<img src="imagen2/11041168_electric_bike_transport_motor_transportation_icon.png" alt="Icono de Envío" class="motor"> <!-- Ruta de la imagen local -->
+					<div class="feature-content">
+						<span>Envío Motorizado</span>
+						<p>En pedido superior a $250</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-wallet"></i>
+					<div class="feature-content">
+						<span>Servicio al Cliente</span>
+						<p>Nos esforzamos por brindar un servicio excepcional</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-gift"></i>
+					<div class="feature-content">
+						<span>Wifi Gratuito</span>
+						<p>Buena conexion a Internet para que navegues libremente</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-headset"></i>
+					<div class="feature-content">
+						<span>Servicio al cliente 24/7</span>
+						<p>LLámenos al 123-456-7890</p>
+					</div>
+				</div>
+			</section>
+<!-- -----------------------------botones------------------------------------------------------------- -->
+			<section class="container top-categories">
+				<h1 class="heading-1">Mejores Categorías</h1>
+				<div class="container-categories">
+					<div class="card-category category-moca">
+						<p>plato del dia</p>
+						<span class="see-more" onclick="openModal('myModal')">Ver más</span>
+					</div>
+
+<!-- Modal que se abrirá al hacer clic en "Ver más" -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('myModal')">&times;</span>
+        <h2 class="modal-title">Plato del Día</h2>
+        <img src="plato.png" alt="Plato del día" class="plato-image">
+        <p class="modal-description">Descripción del plato del día: Jugoso y delicioso plato servido con una variedad de acompañamientos. Perfecto para disfrutar al mediodía.</p>
+        <ul class="modal-options">
+            <li>Opción 1: Acompañante 1</li>
+            <li>Opción 2: Acompañante 2</li>
+
+        </ul>
+    </div>
+</div>
+<!-------------------------------------------------------------------------- -->
+					<div class="card-category category-expreso">
+						<p>quesadilla</p>
+						<span class="see-more" onclick="openModal('myModal1')">Ver más</span>
+					</div>
+					
+<div id="myModal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('myModal1')">&times;</span>
+        <h2 class="modal-title">Plato del Día</h2>
+        <img src="quesadilla.png" alt="Plato del día" class="plato-image">
+        <p class="modal-description">Descripción del plato del día: Jugoso y delicioso plato servido con una variedad de acompañamientos. Perfecto para disfrutar al mediodía.</p>
+        <ul class="modal-options">
+            <li>Acompañante Tostones</li>
+            <li>Acompañante Papas fritas</li>
+        </ul>
+    </div>
+</div>
+<!-- --------------------------------------------------------------------------->
+					<div class="card-category category-capuchino">
+						<p>Buriilo relleno</p>
+						<span class="see-more" onclick="openModal('myModal2')">Ver más</span>
+					</div>
+									
+
+<div id="myModal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('myModal2')">&times;</span>
+        <h2 class="modal-title">Burrito Relleno</h2>
+        <img src="tacos.png" alt="Plato del día" class="plato-image">
+        <p class="modal-description">Descripción del plato del día: Jugoso y delicioso plato servido con una variedad de acompañamientos. Perfecto para disfrutar al mediodía.</p>
+        <ul class="modal-options">
+            <li>Acompañante tostones</li>
+            <li>Acompañante papa frita</li>
+        </ul>
+    </div>
+
+</div>
+</section>
+			
+<!---------------------------------------------------------------------------------->
+<script>
+function showSection(sectionId) {
+  // Seleccionar todas las secciones
+  const sections = document.querySelectorAll('.section');
+
+  // Quitar la clase 'active' de todas las secciones
+  sections.forEach(section => section.classList.remove('active'));
+
+  // Seleccionar la sección activa
+  const activeSection = document.getElementById(sectionId);
+
+  // Agregar la clase 'active' a la sección activa
+  if (activeSection) {
+    activeSection.classList.add('active');
+  }
+}
+//--------------------------------------------------------------------------------------\ 
+
+// Función para abrir el modal específico
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+// Función para cerrar el modal específico
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Cerrar el modal cuando se haga clic fuera de él
+window.onclick = function(event) {
+    // Obtener todos los modales
+    var modals = document.getElementsByClassName("modal");
+    
+    // Recorrer los modales y cerrar el que fue clickeado por fuera
+    for (var i = 0; i < modals.length; i++) {
+        if (event.target === modals[i]) {
+            modals[i].style.display = "none";
+        }
+    }
+}
+
+  </script>
+<!-- -->
+			<!-- 1.2.3.4.5.6.7.8.9.1.0 -->
+          <section class="container top-products">
+				<h1 class="heading-1"></h1>
+	
+				<div class="container-options">
+					<div class="container-options-wrapper">
+					<span class="active" onclick="showSection('carnes')">Carnes</span>
+					<span onclick="showSection('pastas')">Pastas</span>
+					<span onclick="showSection('Hamburguesas')">Hamburguesas</span>
+					<span onclick="showSection('Pizza')">Pizza</span>
+					<span onclick="showSection('Ensaladas')">Ensaladas</span>
+					<span onclick="showSection('Postres')">Postres</span>
+					<span onclick="showSection('Sandwchi')">Sandwchi</span>
+					<span onclick="showSection('Bebidas')">Bebidas</span>
+				</div>
+				</div>
+		  </section>
+		  
+		 
+<section id="carnes" class="section active">
+	<h2 class="section-title">Carnes</h2>
+				<div class="container-products">
+					<!-- Producto 1 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="alitas-de-pollo-fritas.fonfo.jpg" alt="alas de pollo"/>
+							<!-- <span class="discount">-13%</span> -->
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								
+										<!-- <i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-regular fa-star"></i> -->
+									</div>
+							<h3 style="margin: o;">Alas de Pollo frito</h3>
+							 <p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> <!-- Descripción del producto -->
+							<p class="price">RD500 <span></span></p>
+						</div>
+					</div>
+<!---------------------------------->
+                    <!-- esto es otro producto -->
+                    <div class="card-product">
+						<div class="container-img">
+							<img src="nugget.fondo.avif" alt="nutget de pollo"/>
+							<!-- <span class="discount">-13%</span> -->
+						</div>
+						<div class="content-card-product" style="margin-top: auto;">
+							<div class="stars">
+								<!-- <i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i> -->
+							</div>
+							<h3>Nugget de Pollo</h3>
+							<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> <!-- Descripción del producto -->
+							<p class="price">$RD700<span></span></p>
+						</div>
+					</div>
+
+<!-- este es otro producto -->
+                    <div class="card-product">
+						<div class="container-img">
+							<img src="imagen2/pichurina.fondo.jpg" alt="pechurina"/>
+							<!-- <span class="discount">-13%</span> -->
+							<div class="button-group">
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<!-- <i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i> -->
+							</div>
+							<h3>Pechurina de Pollo</h3>
+							<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> <!-- Descripción del producto -->
+							<p class="price">RD300<span></span></p>
+						</div>
+					</div>
+<!------------------------------>
+
+                    <!-- esto es otro producto -->
+                    <div class="card-product">
+						<div class="container-img">
+							<img src="imagen2/Dia-del-pollo-frito.webp" alt="pollo frito"/>
+							<!-- <span class="discount">-13%</span> -->
+						</div>
+						<div class="content-card-product"  style="margin-top: auto;">
+							<div class="stars">
+								<!-- <i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i> -->
+							</div>
+							<h3>Pollo frito</h3>
+							<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> <!-- Descripción del producto -->
+							<p class="price">RD450<span></span></p>
+						</div>
+					</div>
+
+<!-- Producto 2 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img
+								src="imagen2/pollo.horneado.fondo.avif" alt="pollo horneado"/>
+					<!-- <span class="discount">-22%</span> -->
+					<!--lo que va para afuera estrellas-->
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<!-- <i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i> -->
+							</div>
+							<h3>Pollo horneado</h3>
+							<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> <!-- Descripción del producto -->
+							<p class="price">RD350<span></span></p>
+						</div>
+					</div>
+
+<!-- producto siguiente-->
+					<div class="card-product">
+						<div class="container-img">
+							<img
+								src="imagen2/Carne-a-la-parilla.jpg" alt="Bistec"/>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<!-- <i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i> -->
+							</div>
+							<h3>Bistec a la parrilla</h3>
+							<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> <!-- Descripción del producto -->
+							<p class="price">RD1,500<span>RD2,000</span></p>
+						</div>
+					</div>
+
+<!-- producto siguiente a ese -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="imagen2/Churrasco-a-la-parrilla.jpg" alt="Churrasco"/>
+						</div>
+						<!-- style="margin-top: 50PX;" -->
+						<div class="content-card-product">
+							<div class="stars">
+								<!-- <i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i> -->
+							</div>
+							<h3>Churrasco a la parrilla</h3>
+							<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> <!-- Descripción del producto -->
+							<p class="price">RD750<span>RD800</span></p>
+						</div>
+					</div>
+				</div>
+			</section>
+<!--------------------------------------------------------------------------------------------------->
+<!-- acaba los productos aqui -->
+<!------------------                     PASTAS-        --------------------------------------------->
+<section id="pastas" class="section">
+	<h2 class="section-title">Pastas</h2>
+		<div class="container-products">
+			<!-- Producto 1 -->
+			<div class="card-product">
+				<div class="container-img">
+					<img src="imagenes1/lasana.png" alt="lasana"/>
+					<!-- <span class="discount">-13%</span> -->
+				</div>
+				<div class="content-card-product"  style="margin-top: auto;">
+					<div class="stars">
+								<!-- <i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i> -->
+							</div>
+					<h3>Lasana italiana</h3>
+					<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+					<p class="price">RD450<span>RD500</span></p>
+				</div>
+			</div>
+
+<!-- esto es otro producto -->
+			<div class="card-product">
+				<div class="container-img">
+					<img src="imagenes1/macarrones.guarnicion.png" alt="macarrones" style="margin-top: 5%;"/>
+					<!-- <span class="discount">-13%</span> -->
+				</div>
+				<div class="content-card-product" style="margin-top: auto;">
+					<div class="stars">
+						<!-- <i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i> -->
+					</div>
+					<h3>Macarrones Simple</h3>
+					<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+					<p class="price">RD350<span>RD500</span></p>
+				</div>
+			</div>
+
+<!-- este es otro producto -->
+			<div class="card-product">
+				<div class="container-img">
+					<img src="imagenes1/pasta blanca.png" alt="pasta blanca"  style="margin-top: 30%;"/>
+					<!-- <span class="discount">-13%</span> -->
+					<div class="button-group">
+					</div>
+				</div>
+				<div class="content-card-product" style="margin-top: auto;">
+					<div class="stars">
+						<!-- <i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i> -->
+					</div>
+					<h3>Pasta Blanca</h3>
+					<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+					<p class="price">RD550<span>RD600</span></p>
+				</div>
+			</div>
+
+<!-- esto es otro producto -->
+			<div class="card-product">
+				<div class="container-img">
+					<img src="imagenes1/pasta.albondigas.png" alt="Pasta de albondiga" />
+					<!-- <span class="discount">-13%</span> -->
+				</div>
+				<div class="content-card-product">
+					<div class="stars">
+						<!-- <i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i> -->
+					</div>
+					<h3>Pasta de albondiga</h3>
+					<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+					<p class="price">RD375<span>RD420</span></p>
+				</div>
+			</div>
+
+<!-- Producto -->
+			<div class="card-product">
+				<div class="container-img">
+					<img
+						src="imagenes1/pasta.camarones.png" alt="Pasta de camarones" style="margin-top: 40%;"/>
+			<!-- <span class="discount">-22%</span> -->
+			<!--lo que va para afuera estrellas-->
+				</div>
+				<div class="content-card-product"  style="margin-top: auto;">
+					<div class="stars">
+						<!-- <i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i> -->
+					</div>
+					<h3>Pasta de camarones</h3>
+					<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+					<p class="price">RD650<span>RD700</span></p>
+				</div>
+			</div>
+
+<!-- producto siguiente-->
+			<div class="card-product">
+				<div class="container-img">
+					<img
+						src="imagenes1/pasta.fettuccine.png" alt="pasta fettuccine"  style="margin-top: 10%;"/>
+				</div>
+				<div class="content-card-product"  style="margin-top: auto;">
+					<div class="stars">
+						<!-- <i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i> -->
+					</div>
+
+					<h3>Pasta de fettuccine</h3>
+					<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+					<p class="price">RD825<span>RD905</span></p>
+				</div>
+			</div>
+
+<!-- producto siguiente a ese -->
+			<div class="card-product">
+				<div class="container-img">
+					<img src="imagenes1/ramen.fideos.png" alt="ramen" />
+				</div>
+				<!-- style="margin-top: 40%;" -->
+				<div class="content-card-product">
+					<div class="stars">
+						<!-- <i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i> -->
+					</div>
+					<h3>Ramen de fideos</h3>
+					<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+					<p class="price">RD375<span>RD400</span></p>
+				</div>
+			</div>
+		</div>
+</section>		
+<!------------------------------------------------------------------------------------>
+<!--------------------------------HAMBURGUERSA------------------------------------------------------->
+<section id="Hamburguesas" class="section">
+	<h2 class="section-title">Hamburgesa</h2>
+	<div class="container-products">
+		<!-- Producto 1 -->
+		<div class="card-product">
+			<div class="container-img">
+				<img src="combo.png" alt="Combo de hamburge"/>
+				<!-- <span class="discount">-13%</span> -->
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+							<!-- <i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i> -->
+						</div>
+				<h3>Combo de Hamburguesas</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD350<span>RD450</span></p>
+			</div>
+		</div>
+
+<!-- esto es otro producto -->
+		<div class="card-product">
+			<div class="container-img">
+				<img src="hambugersa1.png" alt="Hamburguesas" style="margin-top: 20%;"/>
+				<!-- <span class="discount">-13%</span> -->		
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					<!-- <i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-regular fa-star"></i> -->
+				</div>
+				<h3>Hamburguesa Doble de Res</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD450<span>RD555</span></p>
+			</div>
+		</div>
+
+<!-- este es otro producto -->
+		<div class="card-product">
+			<div class="container-img">
+				<img src="triple1.png" alt="triple1" height="100%" width="100%" />
+				<!-- <span class="discount">-13%</span> -->
+				<div class="button-group">
+				</div>
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					<!-- <i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-regular fa-star"></i> -->
+				</div>
+				<h3>Hamburguesa triple carne</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD600<span>RD650</span></p>
+			</div>
+		</div>
+
+<!-- esto es otro producto -->
+		<div class="card-product">
+			<div class="container-img">
+				<img src="imagenes1/hamburger.simple.png" alt="hambugersa simple" />
+				<!-- <span class="discount">-13%</span> -->
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					<!-- <i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-regular fa-star"></i> -->
+				</div>
+				<h3>Hamburguesa simple</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD250<span>RD300</span></p>
+			</div>
+		</div>
+
+<!-- Producto -->
+		<div class="card-product">
+			<div class="container-img">
+				<img
+					src="imagenes1/hamburger.boble.png" alt="Hamburguesa doble"/>
+		<!-- <span class="discount">-22%</span> -->
+		<!--lo que va para afuera estrellas-->
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					<!-- <i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-regular fa-star"></i>
+					<i class="fa-regular fa-star"></i> -->
+				</div>
+				<h3>Combo de Hamburguesa Doble</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD500<span>RD635</span></p>
+			</div>
+		</div>
+
+<!-- producto siguiente-->
+		<div class="card-product">
+			<div class="container-img">
+				<img
+					src="imagenes1/hambuger.pollo.png" alt="Hamburguesa pollo"/>
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					<!-- <i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i> -->
+				</div>
+				<h3>Hamburgesa Pollo</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD300<span>RD340</span></p>
+			</div>
+		</div>
+
+<!-- producto siguiente a ese -->
+		<div class="card-product">
+			<div class="container-img">
+				<img src="imagenes1/hamburger.bufalo.png" alt="Hamburgesa bufalo" />
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					<!-- <i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-regular fa-star"></i> -->
+				</div>
+				<h3>Hamburgesa Bufalo</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD750<span>RD775</span></p>
+			</div>
+		</div>
+	</div>
+</section>	
+<!--------------------------  PIZZZA  ------------------------------------------------------------>
+<!---------------------------------------------------------------------------------------->
+<section id="Pizza" class="section">
+	<h2 class="section-title">Pizza</h2>
+	<div class="container-products">
+<!-- Producto 1 -->
+		<div class="card-product">
+			<div class="container-img">
+				<img src="imagenes1/p.haullana.png" alt="pizza"/>
+				<!-- <span class="discount">-13%</span> -->
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					
+							<!-- <i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i> -->
+						</div>
+				<h3>Pizza hauwahallana</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD1,500 <span>RD2,000</span></p>
+			</div>
+		</div>
+
+<!-- esto es otro producto -->
+		<div class="card-product">
+			<div class="container-img">
+				<img src="imagenes1/p.jamon.png" alt="Pizza de Jamon" />
+				<!-- <span class="discount">-13%</span> -->
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					<!-- <i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-regular fa-star"></i> -->
+				</div>
+				<h3>Pizza de Jamon</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD500<span>RD600</span></p>
+			</div>
+		</div>
+
+<!-- este es otro producto -->
+		<div class="card-product">
+			<div class="container-img">
+				<img src="imagenes1/p.queso.png" alt="Pizza de Queso" />
+				<!-- <span class="discount">-13%</span> -->
+				<div class="button-group">
+				</div>
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					<!-- <i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-regular fa-star"></i> -->
+				</div>
+				<h3>Pizza de Queso</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD450 <span>RD500</span></p>
+			</div>
+		</div>
+
+<!-- esto es otro producto -->
+		<div class="card-product">
+			<div class="container-img">
+				<img src="imagenes1/peperoni.png" alt="Pizza de peperoni" />
+				<!-- <span class="discount">-13%</span> -->
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					<!-- <i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-regular fa-star"></i> -->
+				</div>
+				<h3>Pizza de peperoni</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD700<span>RD800</span></p>
+			</div>
+		</div>
+
+<!--esto es un producto-->
+		<div class="card-product">
+			<div class="container-img">
+				<img
+					src="imagenes1/p.vegetales.png" alt="Pizza de vegetales"/>
+		<!-- <span class="discount">-22%</span> -->
+		<!--lo que va para afuera estrellas-->
+			</div>
+			<div class="content-card-product">
+				<div class="stars">
+					<!-- <i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-solid fa-star"></i>
+					<i class="fa-regular fa-star"></i>
+					<i class="fa-regular fa-star"></i> -->
+				</div>
+				<h3>Pizza de vegetales</h3>
+				<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+				<p class="price">RD700 <span>RD740</span></p>
+			</div>
+		</div>
+</section>
+
+
+
+		
+<!-- se empiza los especiales . . . . . . .  -->
+
+	<section class="container specials">
+				<h1 class="heading-1">Especiales</h1>
+				<div class="container-products">
+<!------------------------------------------- Producto 1 ------------------------------------------------------------------------>
+					<div class="card-product">
+						<div class="container-img">
+							<img src="imagen2/cafe-con-leche.jpg" alt="Cafe Australiano" />
+							<span class="discount">-13%</span>
+							<!-- <div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div> -->
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<!-- <i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i> -->
+							</div>
+							<h3>Cafe con leche</h3>
+							<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+							<!-- <span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span> -->
+							<p class="price">RD450 <span></span></p>
+						</div>
+						
+					</div>
+
+
+
+
+<!------------------------------------------------ Producto 2 ----------------------------------------------------------------------->
+					<div class="card-product">
+						<div class="container-img">
+							<img
+								src="imagen2/c-tasa-de-cafe.jpeg" alt="Cafe ingles"/>
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<!-- <span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span> -->
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<!-- <i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i> -->
+							</div>
+							<h3>Cafe Inglés</h3>
+							<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+							<!-- <span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span> -->
+							<p class="price">RD600<span></span></p>
+						</div>
+					</div>
+		<!-------------------------------------producto 3------------------------------------------------------------------------------------>
+					<div class="card-product">
+						<div class="container-img">
+							<img src="imagen2/bebida-de-avena-y-cafe.jpg" alt="Cafe avena" />
+							<span class="discount">-30%</span>
+							<!-- <div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div> -->
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<!-- <i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i> -->
+							</div>
+							<h3>Cafe de avena</h3>
+							<p class="description">Crujientes y jugosas alas de pollo, perfectamente sazonadas y fritas a la perfección.</p> 
+							<!-- <span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span> -->
+							<p class="price">RD900<span></span></p>
+						</div>
+					</div>
+ 		
+		</main>
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+		<footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>
+								Dirección: 71 Pennington Lane Vernon Rockville, CT
+								06066
+							</li>
+							<li>Teléfono: 123-456-7890</li>
+							<li>EmaiL: baristas@support.com</li>
+						</ul>
+						<div class="social-icons">
+							<span class="facebook">
+								<i class="fa-brands fa-facebook-f"></i>
+							</span>
+							<span class="twitter">
+								<i class="fa-brands fa-twitter"></i>
+							</span>
+							<span class="youtube">
+								<i class="fa-brands fa-youtube"></i>
+							</span>
+							<span class="pinterest">
+								<i class="fa-brands fa-pinterest-p"></i>
+							</span>
+							<span class="instagram">
+								<i class="fa-brands fa-instagram"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#">Información Delivery</a></li>
+							<li><a href="#">Politicas de Privacidad</a></li>
+							<li><a href="#">Términos y condiciones</a></li>
+						</ul>
+					</div>
+
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
+
+						<ul>
+							<li><a >Historial de ordenes</a></li>
+							<li><a >Lista de deseos</a></li>
+						</ul>
+					</div>
+
+					<div class="newsletter">
+						<p class="title-footer">Boletín informativo</p>
+
+						<div class="content">
+							<p>
+								Esperamos verte pronto en "El-Turcord". ¡Gracias por tu Visita!.
+							</p>
+							<!-- <input type="email" placeholder="Ingresa el correo aquí...">
+							<button>Suscríbete</button> -->
+						</div>
+					</div>
+				</div>
+
+				<div class="copyright">
+					<p>
+						Desarrollado por el programador Eduardo &copy; 2024
+					</p>
+
+					<img src="turco.jpg" alt="Pagos" width="50" height="50">
+				</div>
+			</div>
+		</footer>
+
+		<script
+			src="https://kit.fontawesome.com/81581fb069.js"
+			crossorigin="anonymous"
+		></script>
+		
+		<script>
+			// Función para detectar el modo oscuro
+			function isDarkMode() {
+			  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			}
+		
+			// Aplicar estilos según el modo oscuro
+			if (isDarkMode()) {
+			  document.body.classList.add('dark-mode');
+			}
+		  </script>
+	</body>
+</html>
